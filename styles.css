@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #87CEEB, #B0E0E6);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.input-section {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 70%;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#weatherDisplay {
+    margin-top: 20px;
+}
+
+#locationName {
+    font-size: 20px;
+    margin: 0;
+}
+
+#temperature {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#description {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+#humidity {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Cloud Animation */
+.clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.cloud {
+    width: 200px;
+    height: 60px;
+    background: #fff;
+    background: linear-gradient(to top, #fff, #f1f1f1 50%, #fff 75%);
+    border-radius: 200px;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    opacity: 0.7;
+    animation: float 30s linear infinite;
+}
+
+.cloud:nth-child(2) {
+    width: 250px;
+    height: 75px;
+    top: 50%;
+    left: -10%;
+    animation: float 45s linear infinite;
+    animation-delay: 10s;
+}
+
+.cloud:nth-child(3) {
+    width: 150px;
+    height: 45px;
+    top: 70%;
+    left: -20%;
+    animation: float 20s linear infinite;
+    animation-delay: 20s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateX(-200px);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
